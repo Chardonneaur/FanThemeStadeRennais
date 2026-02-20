@@ -23,28 +23,47 @@
     unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 
-// ── Typography — Bebas Neue for headings and navigation ───────────────────
+// ── Typography — Bebas Neue everywhere ────────────────────────────────────
 
+// Headings
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Bebas Neue', sans-serif;
     letter-spacing: 0.06em;
 }
 
-// Top navigation bar labels
+// Top navigation bar — all elements and their children
+nav,
+nav *,
 #header,
-#header .topBar,
-#header .item,
-#header .menuTab,
-.menuTab a,
-.topBarBtn {
+#header *,
+.top_controls,
+.top_controls *,
+.piwikTopControl,
+.piwikTopControl *,
+.top_bar_sites_selector,
+.top_bar_sites_selector *,
+.piwikSelector,
+.piwikSelector *,
+#periodString,
+#periodString *,
+.menuDropdown,
+.menuDropdown *,
+.languageSelection,
+.languageSelection *,
+.topBarBtn,
+.topBarBtn * {
     font-family: 'Bebas Neue', sans-serif;
-    letter-spacing: 0.08em;
+    letter-spacing: 0.07em;
 }
 
-// Left menu items
+// Left sidebar menu
 .menu-title,
 .sideNavList li a,
-.leftMenu .category {
+.leftMenu .category,
+.collapsible-header,
+.collapsible-header *,
+#secondNavBar,
+#secondNavBar * {
     font-family: 'Bebas Neue', sans-serif;
     letter-spacing: 0.05em;
 }
@@ -64,6 +83,15 @@ button.btn {
     font-family: 'Bebas Neue', sans-serif;
     letter-spacing: 0.1em;
     font-size: 13px;
+}
+
+// Dropdowns and selects
+select,
+.select-wrapper input.select-dropdown,
+.dropdown-content li > a,
+.dropdown-content li > span {
+    font-family: 'Bebas Neue', sans-serif;
+    letter-spacing: 0.06em;
 }
 
 // ── Graph series — rouge, noir, and accents ────────────────────────────────
