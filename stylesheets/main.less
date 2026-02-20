@@ -1,0 +1,151 @@
+/**
+ * FanThemeStadeRennais — Unofficial fan-made Stade Rennais FC theme
+ * Rouge (#E30613) et Noir (#1A1A1A)
+ */
+
+// ── Graph series — rouge, noir, and accents ────────────────────────────────
+
+@graph-colors-data-series0: #E30613; // Rouge Rennais
+@graph-series0-shade1-color: #FF3D4A;
+@graph-series0-shade2-color: #E30613;
+@graph-series0-shade3-color: #B20010;
+
+@graph-colors-data-series1: #1A1A1A; // Noir
+@graph-series1-shade1-color: #3D3D3D;
+@graph-series1-shade2-color: #1A1A1A;
+@graph-series1-shade3-color: #000000;
+
+@graph-colors-data-series2: #C00010; // Rouge foncé
+@graph-series2-shade1-color: #D9001A;
+@graph-series2-shade2-color: #C00010;
+@graph-series2-shade3-color: #8A000C;
+
+@graph-colors-data-series3: #555555; // Gris anthracite
+@graph-series3-shade1-color: #777777;
+@graph-series3-shade2-color: #555555;
+@graph-series3-shade3-color: #333333;
+
+@graph-colors-data-series4: #FF6B6B; // Rouge vif
+@graph-series4-shade1-color: #FF9090;
+@graph-series4-shade2-color: #FF6B6B;
+@graph-series4-shade3-color: #E34040;
+
+@graph-colors-data-series5: #8A000C; // Bordeaux
+@graph-series5-shade1-color: #B0001A;
+@graph-series5-shade2-color: #8A000C;
+@graph-series5-shade3-color: #600008;
+
+@graph-colors-data-series6: #2D2D2D; // Charcoal
+@graph-series6-shade1-color: #4A4A4A;
+@graph-series6-shade2-color: #2D2D2D;
+@graph-series6-shade3-color: #1A1A1A;
+
+@graph-colors-data-series7: #FF2233; // Rouge vif clair
+@graph-series7-shade1-color: #FF5566;
+@graph-series7-shade2-color: #FF2233;
+@graph-series7-shade3-color: #CC0011;
+
+// ── Background — subtle diagonal kit stripes ───────────────────────────────
+
+body {
+    background-color: @theme-color-background-base;
+    color: @theme-color-text;
+    position: relative;
+}
+
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: repeating-linear-gradient(
+        -45deg,
+        transparent,
+        transparent 24px,
+        rgba(227, 6, 19, 0.03) 24px,
+        rgba(227, 6, 19, 0.03) 48px
+    );
+    pointer-events: none;
+    z-index: -1;
+}
+
+// ── Cards ──────────────────────────────────────────────────────────────────
+
+.card {
+    background-color: @theme-color-background-contrast;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.10);
+    border-top: 2px solid transparent;
+
+    &:hover {
+        border-top-color: #E30613;
+    }
+}
+
+.card-content {
+    background-color: @theme-color-background-contrast;
+}
+
+// ── Graph grid ─────────────────────────────────────────────────────────────
+
+.evolution-graph-colors[data-name=grid-background] { color: #FFFFFF; }
+.evolution-graph-colors[data-name=grid-border]     { color: #E8E8E8; }
+.evolution-graph-colors[data-name=ticks]           { color: #CCCCCC; }
+
+// ── Visitor map — rouge gradient ───────────────────────────────────────────
+
+.visitor-map[data-name=no-data-color]                    { color: #F5F5F5; }
+.visitor-map[data-name=one-country-color]                { color: #FFCCCC; }
+.visitor-map[data-name=color-range-start-choropleth]     { color: #FFDDDD; }
+.visitor-map[data-name=color-range-end-choropleth]       { color: #E30613; }
+.visitor-map[data-name=color-range-start-normal]         { color: #E30613; }
+.visitor-map[data-name=color-range-end-normal]           { color: #E30613; }
+.visitor-map[data-name=country-highlight-color]          { color: #1A1A1A; }
+.visitor-map[data-name=country-selected-color]           { color: #1A1A1A; }
+.visitor-map[data-name=region-highlight-color]           { color: #1A1A1A; }
+.visitor-map[data-name=region-selected-color]            { color: #1A1A1A; }
+.visitor-map[data-name=region-stroke-color]              { color: #C00010; }
+.visitor-map[data-name=region-layer-stroke-color]        { color: #CCCCCC; }
+.visitor-map[data-name=special-metrics-color-scale-1]    { color: #E30613; }
+.visitor-map[data-name=special-metrics-color-scale-2]    { color: #E30613; }
+.visitor-map[data-name=special-metrics-color-scale-3]    { color: #C00010; }
+.visitor-map[data-name=special-metrics-color-scale-4]    { color: #C00010; }
+
+.realtime-map[data-name=white-fill] { color: #F5F5F5; }
+.realtime-map[data-name=white-bg]   { color: #E0E0E0; }
+
+// ── Code blocks ───────────────────────────────────────────────────────────
+
+code {
+    background-color: @theme-color-code-background;
+    color: @theme-color-code;
+}
+
+pre {
+    background-color: @theme-color-code-background;
+    color: @theme-color-code;
+}
+
+blockquote {
+    border-left-color: @theme-color-brand;
+}
+
+// ── Evolution indicators ───────────────────────────────────────────────────
+
+.metricEvolution > .positive-evolution { color: #1A7A1A; }
+.metricEvolution > .negative-evolution { color: #E30613; }
+
+// ── Sparklines ────────────────────────────────────────────────────────────
+
+.sparkline-colors[data-name=lineColor]      { color: #E30613; }
+.sparkline-colors[data-name=maxPointColor]  { color: #1A1A1A; }
+.sparkline-colors[data-name=minPointColor]  { color: #C00010; }
+.sparkline-colors[data-name=lastPointColor] { color: #E30613; }
+
+// ── Scrollbar — subtle brand accent ───────────────────────────────────────
+
+::-webkit-scrollbar              { width: 6px; height: 6px; }
+::-webkit-scrollbar-track        { background: #F0F0F0; }
+::-webkit-scrollbar-thumb        { background: #E30613; border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover  { background: #B20010; }

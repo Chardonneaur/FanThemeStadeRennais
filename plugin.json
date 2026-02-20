@@ -1,0 +1,33 @@
+{
+    "name": "FanThemeStadeRennais",
+    "description": "Unofficial fan-made Matomo theme inspired by Stade Rennais FC, in rouge et noir. Not affiliated with Stade Rennais FC.",
+    "version": "1.0.0",
+    "theme": true,
+    "stylesheet": "stylesheets/main.less",
+    "require": {
+        "matomo": ">=5.0.0-b1,<6.0.0-b1"
+    },
+    "authors": [
+        {
+            "name": "Chardonneaur",
+            "homepage": "https://github.com/Chardonneaur"
+        }
+    ],
+    "license": "GPL-3.0+",
+    "homepage": "https://github.com/Chardonneaur/FanThemeStadeRennais",
+    "keywords": [
+        "theme",
+        "fan",
+        "stade-rennais",
+        "rennes",
+        "rouge",
+        "noir",
+        "football",
+        "ligue1",
+        "bretagne"
+    ],
+    "support": {
+        "issues": "https://github.com/Chardonneaur/FanThemeStadeRennais/issues",
+        "source": "https://github.com/Chardonneaur/FanThemeStadeRennais"
+    }
+}
