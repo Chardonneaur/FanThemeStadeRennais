@@ -26,8 +26,8 @@ class FanThemeStadeRennais extends Plugin
         $themeStyles->colorBrand         = '#E30613';
         $themeStyles->colorBrandContrast = '#FFFFFF';
 
-        // === HEADER — Rouge Rennais with white text ===
-        $themeStyles->colorHeaderBackground = '#E30613';
+        // === HEADER — Noir with white text ===
+        $themeStyles->colorHeaderBackground = '#1A1A1A';
         $themeStyles->colorHeaderText       = '#FFFFFF';
 
         // === LINKS — deep red for contrast on white ===
